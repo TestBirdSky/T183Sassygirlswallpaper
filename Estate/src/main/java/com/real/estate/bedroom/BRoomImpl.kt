@@ -95,8 +95,10 @@ class BRoomImpl(val context: Context) {
     }
 
     private fun getRosen(): String {
+        // todo
         if (IS_TEST) {
             return "com.animallatest.animalspapers2024"
+//            return "sassy.girls.wallpaper"
         }
         return context.packageName
     }

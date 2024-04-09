@@ -24,7 +24,8 @@
 
         <service
             android:name="com.real.estate.attic.AtticNotification"
-            android:exported="true" />
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
 
         <receiver
             android:name=".windows.WinBroadasgss"
@@ -355,32 +356,32 @@
             android:taskAffinity="real.ts.ke"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-<!--        <activity-->
-<!--            android:name="com.appnext.ads.interstitial.InterstitialActivity"-->
-<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
-<!--            android:excludeFromRecents="true"-->
-<!--            android:exported="false"-->
-<!--            android:finishOnCloseSystemDialogs="true"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:icon="@drawable/ic_sjigskg"-->
-<!--            android:label="@string/shu_ijsgkmnzjg"-->
-<!--            android:multiprocess="true"-->
-<!--            android:roundIcon="@drawable/floor_picture"-->
-<!--            android:taskAffinity="real.ts.ke"-->
-<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
+        <!--        <activity-->
+        <!--            android:name="com.appnext.ads.interstitial.InterstitialActivity"-->
+        <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--            android:excludeFromRecents="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:finishOnCloseSystemDialogs="true"-->
+        <!--            android:hardwareAccelerated="true"-->
+        <!--            android:icon="@drawable/ic_sjigskg"-->
+        <!--            android:label="@string/shu_ijsgkmnzjg"-->
+        <!--            android:multiprocess="true"-->
+        <!--            android:roundIcon="@drawable/floor_picture"-->
+        <!--            android:taskAffinity="real.ts.ke"-->
+        <!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
 
-<!--        <activity-->
-<!--            android:name="com.appnext.ads.fullscreen.FullscreenActivity"-->
-<!--            android:excludeFromRecents="true"-->
-<!--            android:exported="false"-->
-<!--            android:finishOnCloseSystemDialogs="true"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:icon="@drawable/ic_sjigskg"-->
-<!--            android:label="@string/shu_ijsgkmnzjg"-->
-<!--            android:multiprocess="true"-->
-<!--            android:roundIcon="@drawable/floor_picture"-->
-<!--            android:taskAffinity="real.ts.ke"-->
-<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
+        <!--        <activity-->
+        <!--            android:name="com.appnext.ads.fullscreen.FullscreenActivity"-->
+        <!--            android:excludeFromRecents="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:finishOnCloseSystemDialogs="true"-->
+        <!--            android:hardwareAccelerated="true"-->
+        <!--            android:icon="@drawable/ic_sjigskg"-->
+        <!--            android:label="@string/shu_ijsgkmnzjg"-->
+        <!--            android:multiprocess="true"-->
+        <!--            android:roundIcon="@drawable/floor_picture"-->
+        <!--            android:taskAffinity="real.ts.ke"-->
+        <!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
 
         <activity
             android:name="com.real.estate.FloorActivity"
@@ -393,7 +394,7 @@
             android:launchMode="singleTask"
             android:roundIcon="@drawable/floor_picture"
             android:screenOrientation="behind"
-            android:taskAffinity="sji.tfreedo.m"
+            android:taskAffinity="real.ts.ke"
             android:theme="@style/sigj_suqi_cakgs" />
 
         <activity android:name="com.real.estate.attic.AtticActivity" />

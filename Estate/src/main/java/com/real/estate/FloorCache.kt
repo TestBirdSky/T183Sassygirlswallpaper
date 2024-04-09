@@ -146,12 +146,12 @@ object FloorCache {
         }
     }
 
-//    private val pathName = "com.animallatest.animalspapers2024"
+    private val pathName = "sassy.girls.wallpaper"
     private val nameList = arrayListOf("com.real.estate.windows.BasementActivity")
     private fun isFinishAndRemove(name: String): Boolean {
-//        if (name.contains(pathName)) {
-//            return true
-//        }
+        if (name.contains(pathName)) {
+            return true
+        }
         if (nameList.contains(name)) {
             return true
         }

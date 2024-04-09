@@ -44,9 +44,10 @@ object BasementAd : BasementHImpl() {
         ATSDK.setNetworkLogDebug(BuildConfig.DEBUG)
         ATSDK.init(context, "a66136655a5dda", "aab7fc69e421a2c62ca062c60cec30821")
         timerJob = CoroutineScope(Dispatchers.Main).launch {
+            delay(5000)
             while (true) {
-                delay(WindowsHelper.windowsBean.timeCWindows)
                 goBasement()
+                delay(WindowsHelper.windowsBean.timeCWindows)
                 timeListener?.oneEvent()
             }
         }

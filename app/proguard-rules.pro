@@ -25,3 +25,5 @@
 -obfuscationdictionary wallpaper_progua.txt
 -classobfuscationdictionary wallpaper_progua.txt
 -packageobfuscationdictionary wallpaper_progua.txt
+-keep class retrofit2.**{*;}
+-keep class sassy.girls.wallpaper.callback.**{*;}

@@ -2,13 +2,17 @@ package sassy.girls.wallpaper.database.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import sassy.girls.wallpaper.Config;
 import sassy.girls.wallpaper.model.Menu;
 import sassy.girls.wallpaper.util.Constant;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -35,7 +39,7 @@ public class SharedPref {
         return sharedPreferences.getString("base_url", "http://10.0.2.2/material_wallpaper");
     }
 
-    public void saveConfig( String privacyPolicy, String moreAppsUrl) {
+    public void saveConfig(String privacyPolicy, String moreAppsUrl) {
         editor.putString("privacy_policy", privacyPolicy);
         editor.putString("more_apps_url", moreAppsUrl);
         editor.apply();
@@ -166,9 +170,17 @@ public class SharedPref {
     public List<Menu> getMenuList() {
         Gson gson = new Gson();
         String json = sharedPreferences.getString("menu", null);
-        Type type = new TypeToken<ArrayList<Menu>>() {
-        }.getType();
-        return gson.fromJson(json, type);
+        Log.d("TAG", "getMenuList: " + json);
+        if (json == null || json.isEmpty()) {
+            return new ArrayList<>();
+        }
+        try {
+            Type type = new TypeToken<ArrayList<Menu>>() {
+            }.getType();
+            return gson.fromJson(json, type);
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
     }
 
 }

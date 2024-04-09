@@ -1,7 +1,10 @@
 package sassy.girls.wallpaper.model;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class Menu implements Serializable {
 
     public String menu_id = "";

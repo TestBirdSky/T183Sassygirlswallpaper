@@ -29,6 +29,7 @@ import sassy.girls.wallpaper.util.Constant;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.real.estate.DoorApp;
 import com.solodroid.ads.sdk.format.AppOpenAdAppLovin;
 import com.solodroid.ads.sdk.format.AppOpenAdManager;
 import com.solodroid.ads.sdk.format.AppOpenAdMob;
@@ -36,7 +37,7 @@ import com.solodroid.ads.sdk.format.AppOpenAdWortise;
 import com.solodroid.ads.sdk.util.OnShowAdCompleteListener;
 import com.solodroid.push.sdk.provider.OneSignalPush;
 
-public class MyApplication extends Application {
+public class MyApplication extends DoorApp {
 
     public static final String TAG = "MyApplication";
     private AppOpenAdMob appOpenAdMob;

@@ -41,6 +41,7 @@ import sassy.girls.wallpaper.rest.RestAdapter;
 import sassy.girls.wallpaper.util.AdsManager;
 import sassy.girls.wallpaper.util.Constant;
 import sassy.girls.wallpaper.util.Tools;
+
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.ArrayList;
@@ -250,10 +251,12 @@ public class FragmentWallpaper extends Fragment {
     }
 
     private void onFailRequest(int page_no) {
-        failedPage = page_no;
-        adapterWallpaper.setLoaded();
-        swipeProgress(false);
-        showFailedView(true, getString(R.string.failed_text));
+        if (getContext() != null) {
+            failedPage = page_no;
+            adapterWallpaper.setLoaded();
+            swipeProgress(false);
+            showFailedView(true, getString(R.string.failed_text));
+        }
     }
 
     public void requestAction(final int page_no) {
