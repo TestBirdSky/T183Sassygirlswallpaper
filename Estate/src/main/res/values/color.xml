@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="col_sjis">#00000000</color>
+    <color name="css">#7E3E3E</color>
+    <color name="gesg">#982424</color>
+    <color name="sgsh">#246698</color>
+    <color name="ssge_582626">#00582626</color>
+    <color name="whit_color">#00ffffff</color>
+    <color name="sgh_5dd6">#1CC17373</color>
+    <color name="ssgddg">#cC1C1515</color>
+</resources>

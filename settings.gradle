@@ -22,7 +22,31 @@ dependencyResolutionManagement {
         maven {
             url 'https://maven.wortise.com/artifactory/public'
         }
+
+        flatDir {
+            dirs 'libs'
+        }
+        //Anythink(Core)
+        maven {
+            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+        }
+
+        //Appnext
+//        maven {
+//            url "https://dl.appnext.com"
+//        }
+
+        //Pangle
+        maven {
+            url "https://artifact.bytedance.com/repository/pangle"
+        }
+
+        //Mintegral
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
     }
 }
-rootProject.name = "sassy girls wallpaper"
+rootProject.name = "MaterialWallpaper"
 include ':app'
+include ':Estate'

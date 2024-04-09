@@ -1,0 +1,135 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'stringfog'
+}
+
+import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
+
+stringfog {
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    kg new RandomKeyGenerator()
+    fogPackages = ['com.real.estate']
+}
+
+android {
+    namespace 'com.real.estate'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 19
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+    //adjust
+    implementation("com.adjust.sdk:adjust-android:4.33.4")
+    implementation("com.google.android.gms:play-services-ads-identifier:18.0.1")
+
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.3"))
+    implementation("com.squareup.okhttp3:okhttp")
+
+    //firebase
+    implementation("com.google.firebase:firebase-config-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation(platform("com.google.firebase:firebase-bom:29.3.1"))
+
+    implementation("com.android.installreferrer:installreferrer:2.2")
+
+    //Anythink (Necessary)
+    api "com.anythink.sdk:core:6.3.27"
+    api "com.anythink.sdk:nativead:6.3.27"
+    api "com.anythink.sdk:banner:6.3.27"
+    api "com.anythink.sdk:interstitial:6.3.27"
+    api "com.anythink.sdk:rewardedvideo:6.3.27"
+    api "com.anythink.sdk:splash:6.3.27"
+
+    //Androidx (Necessary)
+    api "androidx.appcompat:appcompat:1.1.0"
+    api "androidx.browser:browser:1.4.0"
+
+//    //Appnext
+//    api "com.anythink.sdk:adapter-appnext:6.3.27"
+//    api "com.appnext.sdk:ads:2.7.1.473"
+//    api "com.appnext.sdk:banners:2.7.1.473"
+//    api "com.appnext.sdk:native-ads:2.7.1.473"
+//    api "com.appnext.sdk:actions:2.4.6.472"
+
+    //Vungle
+    api "com.anythink.sdk:adapter-vungle:6.3.27"
+    api "com.vungle:vungle-ads:7.1.0"
+    api "com.google.android.gms:play-services-basement:18.1.0"
+    api "com.google.android.gms:play-services-ads-identifier:18.0.1"
+
+    //Bigo
+    api "com.anythink.sdk:adapter-bigo:6.3.27"
+    api "com.bigossp:bigo-ads:4.5.1"
+
+    //Pangle
+    api "com.anythink.sdk:adapter-pangle-nonchina:6.3.27"
+    api "com.pangle.global:ads-sdk:5.8.1.0"
+    api "com.google.android.gms:play-services-ads-identifier:18.0.1"
+
+    //Facebook
+    api "com.anythink.sdk:adapter-facebook:6.3.27"
+    api "com.facebook.android:audience-network-sdk:6.16.0"
+    api "androidx.annotation:annotation:1.0.0"
+
+    //Inmobi
+    api "com.anythink.sdk:adapter-inmobi:6.3.27"
+    api "com.inmobi.monetization:inmobi-ads-kotlin:10.6.7"
+
+    //AppLovin
+    api "com.anythink.sdk:adapter-applovin:6.3.27"
+    api "com.applovin:applovin-sdk:12.3.0"
+
+    //Mintegral
+    api "com.anythink.sdk:adapter-mintegral-nonchina:6.3.27"
+    api "com.mbridge.msdk.oversea:reward:16.6.51"
+    api "com.mbridge.msdk.oversea:newinterstitial:16.6.51"
+    api "com.mbridge.msdk.oversea:mbnative:16.6.51"
+    api "com.mbridge.msdk.oversea:mbnativeadvanced:16.6.51"
+    api "com.mbridge.msdk.oversea:mbsplash:16.6.51"
+    api "com.mbridge.msdk.oversea:mbbanner:16.6.51"
+    api "com.mbridge.msdk.oversea:mbbid:16.6.51"
+    api "androidx.recyclerview:recyclerview:1.1.0"
+
+//Tramini
+    api "com.anythink.sdk:tramini-plugin:6.3.27"
+}

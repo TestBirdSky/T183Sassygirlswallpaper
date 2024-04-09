@@ -1,0 +1,6 @@
+//kitchen_cofs_room  整个数据 base64加密
+{
+  "kitchen_isj_s": "30-30-5",//用-分割开 广告检测间隔、定时触发间隔 单位30秒,//广告显示间隔 单位秒, //首次外弹的时间，与安装时间比较；本地默认5分钟； 单位分钟
+  "kitchen_staisjg": "w55m", // v关闭其它开启依次为sim卡检测、是否上报日志、是否显示外弹、通知提醒
+  "kitchen_sjuqi": "not%20set-adjust-bytedance" //用-符号分开需要啥就加啥
+}

@@ -7,11 +7,11 @@ android {
     namespace 'sassy.girls.wallpaper'
     compileSdk 34
     defaultConfig {
-        applicationId "com.fis.wutesg"
+        applicationId "com.test.info"
         minSdk 21
         targetSdk 34
-        versionCode 32
-        versionName "9"
+        versionCode 34
+        versionName "1.10"
         multiDexEnabled true
     }
     buildTypes {
@@ -33,9 +33,17 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
+    implementation(project(':Estate'))
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     //androidX and google support libraries
     implementation 'androidx.appcompat:appcompat:1.6.1'
